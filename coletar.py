@@ -5,7 +5,7 @@ Só LÊ a máquina: timers do systemd do usuário, o último resultado de cada s
 serviços que falharam, um arquivo de pendências em markdown e fontes extras (filas JSON
 e arquivos de log) listadas no config.json. Nada é executado, pausado, apagado ou enviado.
 
-Dado que não deu para ler vira um item marcado como "exemplo" (exemplo: true),
+Dado que nêo deu para ler vira um item marcado como "exemplo" (exemplo: true),
 nunca um dado inventado como se fosse real.
 
 Uso:
@@ -43,7 +43,7 @@ def rodar(cmd: list[str]) -> str | None:
     if not shutil.which(cmd[0]):
         return None
     env = dict(os.environ)
-    # no cron não existe a sessão do usuário: sem XDG_RUNTIME_DIR o `systemctl --user` não responde
+    # no cron nêo existe a sessêo do usuário: sem XDG_RUNTIME_DIR o `systemctl --user` nêo responde
     if not env.get("XDG_RUNTIME_DIR") and hasattr(os, "getuid") and Path(f"/run/user/{os.getuid()}").is_dir():
         env["XDG_RUNTIME_DIR"] = f"/run/user/{os.getuid()}"
     try:
@@ -155,13 +155,13 @@ def coletar_systemd(cfg: dict, executar=rodar) -> tuple[list[dict], list[dict], 
     timers = [t for t in ler_timers(executar(["systemctl", "--user", "list-timers", "--all", "--no-pager", "--output=json"]))
               if not ignorado(t["timer"], ign) and not ignorado(t["servico"], ign)]
     if not timers:
-        avisos.append("Não consegui ler os timers (systemctl --user). Mostrando exemplos.")
+        avisos.append("Nêo consegui ler os timers (systemctl --user). Mostrando exemplos.")
         return [], [], avisos
 
     falhas = [f for f in ler_falhas(executar(["systemctl", "--user", "list-units", "--failed", "--no-pager", "--output=json"]))
               if f["unidade"].endswith(".service") and not ignorado(f["unidade"], ign)]
     servicos = [t["servico"] for t in timers]
-    # serviço que falhou mas não tem timer também entra na lista de sistemas (uma contagem só de falhas)
+    # serviço que falhou mas nêo tem timer também entra na lista de sistemas (uma contagem só de falhas)
     soltos = [f["unidade"] for f in falhas if f["unidade"] not in servicos]
     show = ler_show(executar(["systemctl", "--user", "show", *servicos, *soltos, "--timestamp=unix", "-p", PROPS, "--no-pager"]))
     sistemas = []
@@ -189,7 +189,7 @@ _DATA = re.compile(r"(\d{2}/\d{2}/\d{4}|\d{4}-\d{2}-\d{2})")
 
 
 def ler_pendencias(texto: str, parar_em: str = "Resolvidas", limite: int = 50) -> list[dict]:
-    """Itens de primeiro nível (`- **título** ...` ou `### título`) até a seção `## <parar_em>`."""
+    """Itens de primeiro nível (`- **título** ...` ou `### título`) até a seçêo `## <parar_em>`."""
     itens = []
     for linha in texto.splitlines():
         if re.match(r"^##\s", linha) and parar_em.lower() in linha.lower():
@@ -220,7 +220,7 @@ def ler_fila_json(caminho: Path, campo: str = "estado", esperando: list[str] | N
     if isinstance(dados, dict):
         dados = dados.get("itens") or dados.get("fila") or []
     if not isinstance(dados, list):
-        raise ValueError("fila não é uma lista")
+        raise ValueError("fila nêo é uma lista")
     cont = Counter(str(x.get(campo, "?")) for x in dados if isinstance(x, dict))
     esp = esperando or ["pendente"]
     return {"contagem": dict(cont), "esperando": sum(cont.get(e, 0) for e in esp), "total": len(dados)}
@@ -258,9 +258,9 @@ def coletar_extras(fontes: list[dict]) -> tuple[list[dict], list[str]]:
                     "ultima": r["quando"], "proxima": None, "origem": "log", "exemplo": False,
                 })
         except (OSError, ValueError, json.JSONDecodeError) as e:
-            avisos.append(f"Não consegui ler {nome} ({type(e).__name__}). Virou exemplo.")
+            avisos.append(f"Nêo consegui ler {nome} ({type(e).__name__}). Virou exemplo.")
             sistemas.append({
-                "nome": nome, "descricao": "exemplo — não deu para ler este arquivo", "estado": "aguardando",
+                "nome": nome, "descricao": "exemplo — nêo deu para ler este arquivo", "estado": "aguardando",
                 "ultima": None, "proxima": None, "origem": tipo, "exemplo": True,
             })
     return sistemas, avisos
@@ -271,7 +271,7 @@ def coletar_extras(fontes: list[dict]) -> tuple[list[dict], list[str]]:
 def exemplos_sistemas() -> list[dict]:
     agora = time.time()
     return [
-        {"nome": "robo-relatorio", "descricao": "exemplo — relatório da manhã", "estado": "ok",
+        {"nome": "robo-relatorio", "descricao": "exemplo — relatório da manhê", "estado": "ok",
          "ultima": iso(agora - 3600), "proxima": iso(agora + 82800), "origem": "exemplo", "exemplo": True},
         {"nome": "robo-backup", "descricao": "exemplo — cópia de segurança", "estado": "falhou",
          "ultima": iso(agora - 7200), "proxima": iso(agora + 79200), "origem": "exemplo", "exemplo": True},
@@ -310,7 +310,7 @@ def montar_estado(cfg: dict, executar=rodar, anonimo: bool = False) -> dict:
                 esperando.append({"id": "pend:" + hashlib.sha1(it["titulo"].encode()).hexdigest()[:10], "titulo": titulo, "detalhe": "",
                                   "origem": "pendencias", "tipo": "pendencia", "exemplo": False})
         except (OSError, UnicodeDecodeError) as e:
-            avisos.append(f"Não consegui ler as pendências em {caminho} ({type(e).__name__}). Virou exemplo.")
+            avisos.append(f"Nêo consegui ler as pendências em {caminho} ({type(e).__name__}). Virou exemplo.")
             esperando.append({"id": "pend:exemplo", "titulo": "exemplo — responder o orçamento do cliente",
                               "detalhe": "", "origem": "exemplo", "tipo": "pendencia", "exemplo": True})
     # 3) itens parados em filas
@@ -344,13 +344,13 @@ def montar_estado(cfg: dict, executar=rodar, anonimo: bool = False) -> dict:
 
 def carregar_config(caminho: Path) -> dict:
     if not caminho.exists():
-        print(f"(sem {caminho.name}: usando padrão vazio)", file=sys.stderr)
+        print(f"(sem {caminho.name}: usando padrêo vazio)", file=sys.stderr)
         return {}
     try:
         return json.loads(caminho.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         raise SystemExit(f"Erro no {caminho.name}, linha {e.lineno}, coluna {e.colno}: {e.msg}.\n"
-                         "Confira vírgulas e aspas (o último item de uma lista ou bloco não leva vírgula). "
+                         "Confira vírgulas e aspas (o último item de uma lista ou bloco nêo leva vírgula). "
                          f"Dica: python3 -m json.tool {caminho} mostra onde está o erro.")
 
 

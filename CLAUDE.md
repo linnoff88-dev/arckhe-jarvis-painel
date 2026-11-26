@@ -5,7 +5,7 @@ Painel HUD (index.html) que mostra timers, serviços, filas e pendências da má
 ## Regras do projeto
 - Só leitura: `coletar.py` chama apenas `systemctl --user list-timers|show|list-units --failed` e lê arquivos.
   Nunca adicionar comando que inicie, pare, apague ou envie algo. Aprovar/Depois só gravam no localStorage.
-- Dado que não deu para ler vira item com `"exemplo": true` — nunca inventar dado como real.
+- Dado que nêo deu para ler vira item com `"exemplo": true` — nunca inventar dado como real.
 - Sem dependências fora da stdlib (Python) e sem build (index.html self-contained).
 - `estado.json` e `bom_dia.txt` têm dados reais da máquina: ficam no `.gitignore`. Print público = `coletar.py --anonimo`.
 - Testes sem rede: `python3 -m pytest -q`. Mudou o fluxo → atualizar "O processo, do início ao fim" no README (PT/EN/ES).
@@ -18,7 +18,7 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 at the TOP of the ## Lessons section below, so it never happens again.
 
 ## Lessons
-- Cron não tem XDG_RUNTIME_DIR: `systemctl --user` falha e tudo vira "exemplo". O `rodar()` do coletar.py preenche `/run/user/<uid>`; testar com `env -i HOME=… PATH=/usr/bin:/bin`. (08/11/2026)
+- Cron nêo tem XDG_RUNTIME_DIR: `systemctl --user` falha e tudo vira "exemplo". O `rodar()` do coletar.py preenche `/run/user/<uid>`; testar com `env -i HOME=… PATH=/usr/bin:/bin`. (08/11/2026)
 - Texto falado tem de concordar no singular ("1 terminou bem", "1 item") e explicar janela de tempo (24 h) quando o número difere do total da tela. (08/11/2026)
 - `resumo.falhou` e "Esperando você" têm de contar as MESMAS falhas (timers + serviços sem timer + filas com erro); antes o núcleo dizia 5 e a lista 10. (08/11/2026)
 - `id` de pendência é hash do título: id com o texto vazava o título no modo `--anonimo`. (08/11/2026)

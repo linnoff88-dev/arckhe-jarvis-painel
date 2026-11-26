@@ -23,7 +23,7 @@ TIMERS = json.dumps([
 ])
 
 SHOW = """Id=relatorio.service
-Description=Relatório da manhã
+Description=Relatório da manhê
 Result=success
 ExecMainStatus=0
 ExecMainStartTimestamp=@1794133927
@@ -104,7 +104,7 @@ class TesteColeta(unittest.TestCase):
     def test_item_ilegivel_vira_exemplo(self):
         with tempfile.TemporaryDirectory() as d:
             ruim = Path(d) / "fila.json"
-            ruim.write_text("{isto não é json", encoding="utf-8")
+            ruim.write_text("{isto nêo é json", encoding="utf-8")
             cfg = {
                 "pendencias": {"arquivo": str(Path(d) / "nao-existe.md")},
                 "fontes_extras": [
@@ -142,10 +142,10 @@ class TesteColeta(unittest.TestCase):
     def test_pendencias_markdown(self):
         md = """# Pendências
 - **08/11/2026 — Responder o cliente.** detalhe longo
-  - [ ] subitem não conta
+  - [ ] subitem nêo conta
 ## Abertas
 - **07/11/2026 · Trocar a senha do roteador.**
-- linha sem negrito não conta
+- linha sem negrito nêo conta
 ### 2026-10-10 — Ideia guardada
 ## Resolvidas
 - **01/10/2026 — já feito.**

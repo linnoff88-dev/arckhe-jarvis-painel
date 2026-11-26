@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>jarvis-painel — o painel do seu Jarvis</title>
-<meta name="description" content="Uma tela de ficção científica que mostra seus timers, robôs, filas e pendências num lugar só e fala bom dia em português. Só lê a máquina: nada é executado.">
+<meta name="description" content="Uma tela de ficçêo científica que mostra seus timers, robôs, filas e pendências num lugar só e fala bom dia em português. Só lê a máquina: nada é executado.">
 <link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/jarvis-painel/guia/">
 <link rel="alternate" hreflang="en" href="https://inematds.github.io/jarvis-painel/guia/en/">
 <link rel="alternate" hreflang="es" href="https://inematds.github.io/jarvis-painel/guia/es/">
@@ -146,7 +146,7 @@
       <p class="lead">E fala bom dia: o que rodou desde ontem, o que falhou, o que espera você e a primeira coisa a fazer.</p>
       <div class="cta">
         <a class="btn" href="#guia">Começar o guia</a>
-        <a class="btn ghost" href="https://inematds.github.io/jarvis-painel/" target="_blank" rel="noopener">Ver a demonstração</a>
+        <a class="btn ghost" href="https://inematds.github.io/jarvis-painel/" target="_blank" rel="noopener">Ver a demonstraçêo</a>
       </div>
     </div>
     <figure><img src="assets/banner.jpg" alt="Banner: seus robôs na tela, um painel que mostra tudo e fala bom dia"></figure>
@@ -155,7 +155,7 @@
 
 <section id="resumo" class="resumo"><div class="wrap">
   <span class="chip">Em resumo</span>
-  <p>O jarvis-painel é uma tela no estilo ficção científica (o "HUD", aquele painel de informações dos filmes) que junta, num lugar só, tudo o que roda sozinho no seu computador: os timers do Linux, filas e arquivos de log. Serve para quem tem robôs, rotinas e filas trabalhando e não sabe o que cada um fez nem o que está esperando por você. Ele mostra quem terminou bem, quem falhou e a sua lista de pendências, e lê um resumo em voz alta em português. Precisa só de Python 3 e de um navegador; tudo roda na sua máquina, sem chave e sem serviço pago, e ele só lê: nada é executado pelos botões.</p>
+  <p>O jarvis-painel é uma tela no estilo ficçêo científica (o "HUD", aquele painel de informações dos filmes) que junta, num lugar só, tudo o que roda sozinho no seu computador: os timers do Linux, filas e arquivos de log. Serve para quem tem robôs, rotinas e filas trabalhando e nêo sabe o que cada um fez nem o que está esperando por você. Ele mostra quem terminou bem, quem falhou e a sua lista de pendências, e lê um resumo em voz alta em português. Precisa só de Python 3 e de um navegador; tudo roda na sua máquina, sem chave e sem serviço pago, e ele só lê: nada é executado pelos botões.</p>
 </div></section>
 
 <section id="video"><div class="wrap">
@@ -168,11 +168,11 @@
 
 <section id="oque"><div class="wrap">
   <span class="chip">O que é</span>
-  <h2>Uma tela para os robôs que você não vê</h2>
+  <h2>Uma tela para os robôs que você nêo vê</h2>
   <p class="sub">Quem automatiza acaba com dezenas de rotinas rodando escondidas. O painel lê tudo e mostra em três partes: Sistemas, o núcleo que fala e "Esperando você".</p>
   <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="assets/banner-grade.jpg" alt="Banner com os seis recursos: Sistemas, Esperando você, Bom dia em voz, Modo foco, Só leitura e Celular" loading="lazy" style="width:100%;display:block"></figure>
 
-  <p class="sub" style="margin-bottom:12px">Lido de verdade numa máquina do INEMA em 08/11/2026, às 08:18 (na sua máquina os números serão outros, e mudam a cada hora):</p>
+  <p class="sub" style="margin-bottom:12px">Lido de verdade numa máquina do INEMA em 08/11/2026, às 08:18 (na sua máquina os números serêo outros, e mudam a cada hora):</p>
   <div class="nums">
     <div><b>62</b><span>sistemas lidos (53 timers, 6 serviços sem timer, 3 filas e logs)</span></div>
     <div><b>40</b><span>terminaram bem</span></div>
@@ -184,7 +184,7 @@
   <div class="grid g3">
     <div class="card"><h3>🛰️ Tudo num lugar</h3><p>Timers do Linux com o último resultado de cada um, serviços que falharam, filas JSON, logs e o seu arquivo de pendências em markdown.</p></div>
     <div class="card"><h3>🔊 Fala com você</h3><p>Bom dia, Status, O que espera e Modo foco. Voz em português do próprio navegador, sem serviço pago.</p></div>
-    <div class="card"><h3>🔒 Só lê</h3><p>Aprovar e Depois só marcam na tela. Nada é iniciado, parado, apagado ou enviado. O que não deu para ler aparece como "exemplo".</p></div>
+    <div class="card"><h3>🔒 Só lê</h3><p>Aprovar e Depois só marcam na tela. Nada é iniciado, parado, apagado ou enviado. O que nêo deu para ler aparece como "exemplo".</p></div>
   </div>
 </div></section>
 
@@ -218,7 +218,7 @@
     <div class="card"><h3>Python 3.9 ou mais novo e o git</h3><p>O Python vem no Ubuntu e no Mac. O git (que baixa o kit) nem sempre: no Ubuntu, instale com <code>sudo apt install git</code>. Confira os dois:</p><pre>python3 --version
 git --version</pre></div>
     <div class="card"><h3>Linux com systemd (para dados reais)</h3><p>Timer é uma rotina que roda sozinha em hora marcada (o "agendador" do Linux, chamado systemd). Os timers vêm do <code>systemctl --user</code>. Sem ele (no Mac, por exemplo), os sistemas aparecem como "exemplo"; pendências e filas continuam reais.</p><pre>systemctl --user list-timers</pre></div>
-    <div class="card"><h3>Navegador e, se quiser, Ollama</h3><p>Chrome, Edge ou Firefox. A voz pt-BR depende das vozes do seu sistema. O Ollama é um programa gratuito que roda um modelo de IA no seu próprio computador (instalação em ollama.com); aqui ele só deixa o resumo mais natural. Se tiver, este comando lista os modelos:</p><pre>ollama list</pre></div>
+    <div class="card"><h3>Navegador e, se quiser, Ollama</h3><p>Chrome, Edge ou Firefox. A voz pt-BR depende das vozes do seu sistema. O Ollama é um programa gratuito que roda um modelo de IA no seu próprio computador (instalaçêo em ollama.com); aqui ele só deixa o resumo mais natural. Se tiver, este comando lista os modelos:</p><pre>ollama list</pre></div>
   </div>
 </div></section>
 
@@ -235,17 +235,17 @@ cd jarvis-painel</pre>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
-    <h3>Diga quem é você e onde estão as suas pendências</h3>
+    <h3>Diga quem é você e onde estêo as suas pendências</h3>
     <p>O <code>config.json</code> vem configurado para o INEMA. Abra no editor do terminal (salve com Ctrl+O, Enter, e saia com Ctrl+X):</p>
 <pre>nano config.json</pre>
-    <p>O mais simples é apagar tudo e colar este, trocando o nome e o caminho do seu arquivo de pendências (se não tiver, deixe como está: o painel mostra um "exemplo" no lugar):</p>
+    <p>O mais simples é apagar tudo e colar este, trocando o nome e o caminho do seu arquivo de pendências (se nêo tiver, deixe como está: o painel mostra um "exemplo" no lugar):</p>
 <pre>{
   "nome": "Marta",
   "pendencias": { "arquivo": "~/pendencias.md", "parar_em": "Resolvidas" },
   "fontes_extras": [],
   "ignorar": ["snap.*", "run-u*", "*.scope"]
 }</pre>
-    <p>A versão do INEMA, que vem no kit, também lê duas filas e um log:</p>
+    <p>A versêo do INEMA, que vem no kit, também lê duas filas e um log:</p>
 <pre>{
   "nome": "Nei",
   "pendencias": { "arquivo": "~/projetos/wifi/pendencias.md", "parar_em": "Resolvidas" },
@@ -255,7 +255,7 @@ cd jarvis-painel</pre>
   ],
   "ignorar": ["snap.*", "run-u*", "*.scope"]
 }</pre>
-    <p>No arquivo de pendências, cada linha que começa com <code>- **título**</code> ou <code>### título</code> vira um item, até a seção <code>## Resolvidas</code>.</p>
+    <p>No arquivo de pendências, cada linha que começa com <code>- **título**</code> ou <code>### título</code> vira um item, até a seçêo <code>## Resolvidas</code>.</p>
     <p>Markdown é um arquivo de texto simples (<code>.md</code>) em que <code>**palavra**</code> marca negrito; crie o seu com <code>nano ~/pendencias.md</code> e escreva uma pendência por linha, assim: <code>- **Pagar o boleto**</code>. Uma fila JSON é a lista de tarefas que um robô grava em arquivo; um log é o arquivo onde ele anota o que fez.</p>
   </div></div>
 
@@ -265,14 +265,14 @@ cd jarvis-painel</pre>
 <pre>python3 coletar.py</pre>
     <p>Na máquina do INEMA, o terminal mostrou (o script escreve em português):</p>
 <pre>estado.json: 62 sistemas (53 timers) · 40 ok · 11 falharam · 42 esperando você · 0 exemplos</pre>
-    <p>Se o <code>config.json</code> tiver um erro de digitação, o script diz a linha e a coluna do erro.</p>
+    <p>Se o <code>config.json</code> tiver um erro de digitaçêo, o script diz a linha e a coluna do erro.</p>
   </div></div>
 
   <div class="step"><div class="b">4</div><div>
-    <h3>Escreva o resumo da manhã</h3>
+    <h3>Escreva o resumo da manhê</h3>
     <p>Por regra fixa, sem IA: o que os robôs fizeram desde ontem, o que espera você e a primeira coisa a fazer. Grava em <code>bom_dia.txt</code>.</p>
 <pre>python3 bom_dia.py</pre>
-    <p>Com Ollama rodando, o modelo local deixa o texto mais natural sem mudar os números (o modelo fica no <code>config.json</code>; se o Ollama não responder, fica o texto da regra). Na máquina do INEMA levou 17,5 segundos com o qwen3.8:27b.</p>
+    <p>Com Ollama rodando, o modelo local deixa o texto mais natural sem mudar os números (o modelo fica no <code>config.json</code>; se o Ollama nêo responder, fica o texto da regra). Na máquina do INEMA levou 17,5 segundos com o qwen3.8:27b.</p>
 <pre>python3 bom_dia.py --ollama</pre>
   </div></div>
 
@@ -313,8 +313,8 @@ cd jarvis-painel</pre>
   <h2>A partida, o celular, o Aprovar e o foco</h2>
   <p class="sub">Prints da mesma máquina, com as pendências no modo anônimo.</p>
   <div class="ex">
-    <figure><img src="assets/painel-partida.jpg" alt="Partida: o núcleo aparece com os anéis e o texto Inicializando, Sistemas no ar (62 lidos)" loading="lazy"><figcaption>Partida de cerca de 3 segundos: "Inicializando… Sistemas no ar." e então "Bom dia, Nei."</figcaption></figure>
-    <figure><img src="assets/painel-aprovado.jpg" alt="Painel Esperando você com um item marcado como Aprovado (só na tela) e o botão Desfazer" loading="lazy"><figcaption>Aprovar só marca na tela: o item fica apagado com "Aprovado (só na tela)" e o botão Desfazer.</figcaption></figure>
+    <figure><img src="assets/painel-partida.jpg" alt="Partida: o núcleo aparece com os anéis e o texto Inicializando, Sistemas no ar (62 lidos)" loading="lazy"><figcaption>Partida de cerca de 3 segundos: "Inicializando… Sistemas no ar." e entêo "Bom dia, Nei."</figcaption></figure>
+    <figure><img src="assets/painel-aprovado.jpg" alt="Painel Esperando você com um item marcado como Aprovado (só na tela) e o botêo Desfazer" loading="lazy"><figcaption>Aprovar só marca na tela: o item fica apagado com "Aprovado (só na tela)" e o botêo Desfazer.</figcaption></figure>
     <figure><img src="assets/painel-foco.jpg" alt="Modo foco: os painéis laterais escurecidos e só o núcleo aceso" loading="lazy"><figcaption>Modo foco: os painéis escurecem e o núcleo fica sozinho.</figcaption></figure>
     <figure><img src="assets/painel-celular.jpg" alt="O painel no celular: núcleo no topo, contadores, listas e a barra de atalhos fixa embaixo" loading="lazy"><figcaption>No celular (390 px): sem rolagem lateral, com a barra de atalhos fixa embaixo.</figcaption></figure>
   </div>
@@ -325,29 +325,29 @@ cd jarvis-painel</pre>
   <h2>Três pedidos para colar</h2>
   <p class="sub">Ficam na pasta <code>prompts/</code> (e em inglês e espanhol em <code>prompts/en/</code> e <code>prompts/es/</code>).</p>
   <div class="grid g3">
-    <div class="card"><h3>Personalidade do Jarvis</h3><p>Cole no começo da conversa com um modelo: português, frases curtas, usa só os números do painel, diz "não sei" quando falta dado e nunca executa nada sozinho. Arquivo <code>prompts/jarvis-personalidade.md</code>.</p></div>
+    <div class="card"><h3>Personalidade do Jarvis</h3><p>Cole no começo da conversa com um modelo: português, frases curtas, usa só os números do painel, diz "nêo sei" quando falta dado e nunca executa nada sozinho. Arquivo <code>prompts/jarvis-personalidade.md</code>.</p></div>
     <div class="card"><h3>Pesquisa de clientes, só lendo</h3><p>Para o Claude Code com navegador. Troque o ramo e a cidade. Arquivo <code>prompts/pesquisa-clientes.md</code>.</p>
 <pre class="prompt">Procure &lt;ramo&gt; em &lt;cidade&gt;. Abra os 3 primeiros sites que aparecerem.
 Monte uma tabela com: nome, site, telefone e uma coisa que o site faz mal.
-Regras: só leia. Não contate ninguém, não preencha formulário.</pre></div>
+Regras: só leia. Nêo contate ninguém, nêo preencha formulário.</pre></div>
     <div class="card"><h3>Conserta a tela</h3><p>Se o painel abrir em branco ou com erro, abra o Claude Code ou o Codex na pasta, cole o pedido e o erro do console (tecla F12). Arquivo <code>prompts/conserta-tela.md</code>.</p></div>
   </div>
-  <div class="aviso" style="margin-top:26px">Quer conversar por voz com um modelo que roda na sua GPU? O painel funciona sozinho, e o kit irmão <a href="https://inematds.github.io/jarvis-local/guia/" target="_blank" rel="noopener"><strong>jarvis-local</strong></a> adiciona o ouvido e a voz. Use o <code>prompts/jarvis-personalidade.md</code> como instrução dele.</div>
+  <div class="aviso" style="margin-top:26px">Quer conversar por voz com um modelo que roda na sua GPU? O painel funciona sozinho, e o kit irmêo <a href="https://inematds.github.io/jarvis-local/guia/" target="_blank" rel="noopener"><strong>jarvis-local</strong></a> adiciona o ouvido e a voz. Use o <code>prompts/jarvis-personalidade.md</code> como instruçêo dele.</div>
 </div></section>
 
 <section id="roadmap"><div class="wrap">
   <span class="chip">Limites e próximos passos</span>
-  <h2>O que ele faz hoje e o que não faz</h2>
+  <h2>O que ele faz hoje e o que nêo faz</h2>
   <p class="sub">Para você saber o que esperar antes de colocar no dia a dia.</p>
-  <div class="phase"><div class="tag">Hoje</div><div class="d"><strong>Versão 1.0</strong><span>Lê timers e serviços do systemd do usuário, pendências em markdown, filas JSON e logs. Fala pela voz do navegador. Resumo por regra e, opcionalmente, pelo Ollama.</span></div></div>
-  <div class="phase"><div class="tag">Não faz</div><div class="d"><strong>Nenhuma ação na máquina</strong><span>Não liga, não para e não reinicia serviços; Aprovar e Depois não chegam a lugar nenhum além do navegador. Timers do sistema (root) e do cron não aparecem.</span></div></div>
-  <div class="phase"><div class="tag">Voz</div><div class="d"><strong>Depende do navegador</strong><span>Alguns navegadores só falam depois do primeiro clique na página. Se não houver voz pt-BR instalada, o texto aparece digitado do mesmo jeito.</span></div></div>
-  <div class="phase"><div class="tag">Ideia</div><div class="d"><strong>Mais fontes</strong><span>Ler o cron e os timers do sistema, e contêineres Docker. Ainda não existe.</span></div></div>
+  <div class="phase"><div class="tag">Hoje</div><div class="d"><strong>Versêo 1.0</strong><span>Lê timers e serviços do systemd do usuário, pendências em markdown, filas JSON e logs. Fala pela voz do navegador. Resumo por regra e, opcionalmente, pelo Ollama.</span></div></div>
+  <div class="phase"><div class="tag">Nêo faz</div><div class="d"><strong>Nenhuma açêo na máquina</strong><span>Nêo liga, nêo para e nêo reinicia serviços; Aprovar e Depois nêo chegam a lugar nenhum além do navegador. Timers do sistema (root) e do cron nêo aparecem.</span></div></div>
+  <div class="phase"><div class="tag">Voz</div><div class="d"><strong>Depende do navegador</strong><span>Alguns navegadores só falam depois do primeiro clique na página. Se nêo houver voz pt-BR instalada, o texto aparece digitado do mesmo jeito.</span></div></div>
+  <div class="phase"><div class="tag">Ideia</div><div class="d"><strong>Mais fontes</strong><span>Ler o cron e os timers do sistema, e contêineres Docker. Ainda nêo existe.</span></div></div>
 </div></section>
 
 <footer>
   <div class="wrap">
-    <div class="pill">Python 3 (só biblioteca padrão)</div><div class="pill">HTML + canvas</div><div class="pill">speechSynthesis pt-BR</div><div class="pill">Ollama (opcional)</div>
+    <div class="pill">Python 3 (só biblioteca padrêo)</div><div class="pill">HTML + canvas</div><div class="pill">speechSynthesis pt-BR</div><div class="pill">Ollama (opcional)</div>
     <p style="margin-top:18px">jarvis-painel · licença MIT · conteúdo aberto e gratuito ·
       <a href="https://github.com/inematds/jarvis-painel">github.com/inematds/jarvis-painel</a> ·
       <a href="https://inema.club">INEMA.CLUB</a></p>

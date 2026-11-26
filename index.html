@@ -163,7 +163,7 @@ function exemplo() {
   return { nome: "você", assistente: "JARVIS", exemploTudo: true,
     resumo: { sistemas: 3, timers: 3, ok: 1, falhou: 1, rodando: 0, aguardando: 1, esperando: 2, exemplos: 5 },
     sistemas: [
-      { nome: "robo-relatorio", descricao: "exemplo — relatório da manhã", estado: "ok", ultima: iso(agora - 36e5), exemplo: true },
+      { nome: "robo-relatorio", descricao: "exemplo — relatório da manhê", estado: "ok", ultima: iso(agora - 36e5), exemplo: true },
       { nome: "robo-backup", descricao: "exemplo — cópia de segurança", estado: "falhou", ultima: iso(agora - 72e5), exemplo: true },
       { nome: "robo-fila-videos", descricao: "exemplo — fila de vídeos", estado: "aguardando", ultima: null, exemplo: true }],
     esperando: [
@@ -186,7 +186,7 @@ async function carregar() {
 
 /* ---------- tempo ---------- */
 function haQuanto(iso) {
-  if (!iso) return "ainda não rodou";
+  if (!iso) return "ainda nêo rodou";
   const s = (Date.now() - new Date(iso).getTime()) / 1000;
   if (s < 0) return "agora";
   if (s < 90) return "há 1 min";
@@ -280,7 +280,7 @@ const CMDS = {
   status: () => {
     const r = estado.resumo || {};
     falar(`Status: ${r.sistemas ?? 0} sistemas. ${r.ok ?? 0} ok, ${r.falhou ?? 0} com falha, ${r.rodando ?? 0} rodando agora e ${r.aguardando ?? 0} aguardando. `
-      + (r.exemplos ? (r.exemplos === 1 ? "1 item é exemplo. " : `${r.exemplos} itens são exemplo. `) : "") + `Atualizado ${haQuanto(estado.gerado_em)}.`, "status");
+      + (r.exemplos ? (r.exemplos === 1 ? "1 item é exemplo. " : `${r.exemplos} itens sêo exemplo. `) : "") + `Atualizado ${haQuanto(estado.gerado_em)}.`, "status");
   },
   espera: () => {
     const ab = (estado.esperando || []).filter(x => !marcas[x.id]);

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""bom_dia.py — escreve o resumo da manhã a partir do estado.json.
+"""bom_dia.py — escreve o resumo da manhê a partir do estado.json.
 
 1) Por regra fixa (sem IA): o que os robôs fizeram desde ontem, o que espera você
    e a 1 coisa a fazer primeiro.
 2) Opcional (--ollama): se houver Ollama rodando NESTA máquina, pede ao modelo local
-   para deixar o texto mais natural. Se o Ollama não responder, fica o texto da regra.
+   para deixar o texto mais natural. Se o Ollama nêo responder, fica o texto da regra.
 
 Uso:
     python3 bom_dia.py                    # grava bom_dia.txt e mostra na tela
@@ -56,7 +56,7 @@ def resumo_por_regra(estado: dict, agora: datetime | None = None) -> str:
         linhas.append(f"Nas últimas 24 horas, {n(len(recentes), 'robô trabalhou', 'robôs trabalharam')} e "
                       f"{n(len(ok), 'terminou bem', 'terminaram bem')}.")
     else:
-        linhas.append("Não vi nenhum robô trabalhando nas últimas 24 horas.")
+        linhas.append("Nêo vi nenhum robô trabalhando nas últimas 24 horas.")
     if falhas:
         nomes = ", ".join(s["nome"] for s in falhas[:3])
         linhas.append(f"Com falha: {nomes}" + (f" e mais {len(falhas) - 3}." if len(falhas) > 3 else "."))
@@ -82,15 +82,15 @@ def resumo_por_regra(estado: dict, agora: datetime | None = None) -> str:
     linhas.append(f"A primeira coisa a fazer: {primeiro}.")
     if estado.get("resumo", {}).get("exemplos"):
         x = estado['resumo']['exemplos']
-        linhas.append(f"Atenção: {n(x, 'item é exemplo', 'itens são exemplos')}, porque não deu para ler a fonte.")
+        linhas.append(f"Atençêo: {n(x, 'item é exemplo', 'itens sêo exemplos')}, porque nêo deu para ler a fonte.")
     return " ".join(linhas)
 
 
 def melhorar_com_ollama(texto: str, url: str, modelo: str, prompt_extra: str = "", timeout: float = 60) -> str | None:
-    """Pede ao Ollama LOCAL para reescrever. Devolve None se não houver Ollama ou der erro."""
+    """Pede ao Ollama LOCAL para reescrever. Devolve None se nêo houver Ollama ou der erro."""
     pedido = (prompt_extra + "\n\n" if prompt_extra else "") + (
         "Reescreva o resumo abaixo em português do Brasil, em até 5 frases curtas, tom calmo de assistente pessoal. "
-        "Não invente nada: mantenha todos os números e nomes exatamente como estão.\n\nResumo:\n" + texto)
+        "Nêo invente nada: mantenha todos os números e nomes exatamente como estêo.\n\nResumo:\n" + texto)
     corpo = json.dumps({"model": modelo, "prompt": pedido, "stream": False, "think": False}).encode()
     req = urllib.request.Request(url.rstrip("/") + "/api/generate", data=corpo, headers={"Content-Type": "application/json"})
     try:
@@ -102,7 +102,7 @@ def melhorar_com_ollama(texto: str, url: str, modelo: str, prompt_extra: str = "
 
 
 def main(argv=None) -> int:
-    ap = argparse.ArgumentParser(description="Resumo da manhã a partir do estado.json.")
+    ap = argparse.ArgumentParser(description="Resumo da manhê a partir do estado.json.")
     ap.add_argument("--estado", default=str(AQUI / "estado.json"))
     ap.add_argument("--config", default=str(AQUI / "config.json"))
     ap.add_argument("--saida", default=str(AQUI / "bom_dia.txt"))
@@ -126,7 +126,7 @@ def main(argv=None) -> int:
         if melhor:
             texto, fonte = melhor, "ollama"
         else:
-            print("(Ollama não respondeu: fica o texto da regra)", file=sys.stderr)
+            print("(Ollama nêo respondeu: fica o texto da regra)", file=sys.stderr)
     Path(a.saida).write_text(texto + "\n", encoding="utf-8")
     print(f"[{fonte}] {texto}")
     return 0
