@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>jarvis-painel — o painel do seu Jarvis</title>
 <meta name="description" content="Uma tela de ficçêo científica que mostra seus timers, robôs, filas e pendências num lugar só e fala bom dia em português. Só lê a máquina: nada é executado.">
-<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/jarvis-painel/guia/">
-<link rel="alternate" hreflang="en" href="https://inematds.github.io/jarvis-painel/guia/en/">
-<link rel="alternate" hreflang="es" href="https://inematds.github.io/jarvis-painel/guia/es/">
-<meta property="og:image" content="https://inematds.github.io/jarvis-painel/guia/assets/banner.jpg">
+<link rel="alternate" hreflang="pt-BR" href="https://linnoff88-dev.github.io/arckhe-/guia/">
+<link rel="alternate" hreflang="en" href="https://linnoff88-dev.github.io/arckhe-/guia/en/">
+<link rel="alternate" hreflang="es" href="https://linnoff88-dev.github.io/arckhe-/guia/es/">
+<meta property="og:image" content="https://linnoff88-dev.github.io/arckhe-/guia/assets/banner.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -43,8 +43,8 @@
   nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb);white-space:nowrap}
   nav .brand .emoji{font-size:1.25rem}
   nav .sep{color:var(--mut);opacity:.45}
-  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
-  nav .inema:hover{filter:brightness(1.15)}
+  nav .ARCKHÉ{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .ARCKHÉ:hover{filter:brightness(1.15)}
   nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
   nav .pro:hover{filter:brightness(1.15)}
   nav .clubpro{display:inline-flex;align-items:center;gap:6px}
@@ -122,9 +122,9 @@
   <a class="brand" href="#top"><span class="emoji">🛰️</span> jarvis-painel</a>
   <span class="sep">|</span>
   <span class="clubpro">
-    <a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+    <a class="ARCKHÉ" href="https://ARCKHÉ AI" target="_blank" rel="noopener">ARCKHÉ AI</a>
     <span class="sep">-</span>
-    <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+    <a class="pro" href="https://ARCKHÉ.pro" target="_blank" rel="noopener">PRO</a>
   </span>
   <div class="links">
     <a class="sec" href="#oque">O que é</a>
@@ -133,7 +133,7 @@
     <a class="sec" href="#prompts">Prompts</a>
     <span class="lang"><a class="on" href="./">PT</a><a href="en/">EN</a><a href="es/">ES</a></span>
     <button class="tgl" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">🌙</button>
-    <a class="btn" href="https://github.com/inematds/jarvis-painel" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://github.com/linnoff88-dev/jarvis-painel" target="_blank" rel="noopener">GitHub</a>
   </div>
 </div></nav>
 
@@ -146,7 +146,7 @@
       <p class="lead">E fala bom dia: o que rodou desde ontem, o que falhou, o que espera você e a primeira coisa a fazer.</p>
       <div class="cta">
         <a class="btn" href="#guia">Começar o guia</a>
-        <a class="btn ghost" href="https://inematds.github.io/jarvis-painel/" target="_blank" rel="noopener">Ver a demonstraçêo</a>
+        <a class="btn ghost" href="https://linnoff88-dev.github.io/arckhe-/" target="_blank" rel="noopener">Ver a demonstraçêo</a>
       </div>
     </div>
     <figure><img src="assets/banner.jpg" alt="Banner: seus robôs na tela, um painel que mostra tudo e fala bom dia"></figure>
@@ -172,7 +172,7 @@
   <p class="sub">Quem automatiza acaba com dezenas de rotinas rodando escondidas. O painel lê tudo e mostra em três partes: Sistemas, o núcleo que fala e "Esperando você".</p>
   <figure style="margin:0 0 26px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img src="assets/banner-grade.jpg" alt="Banner com os seis recursos: Sistemas, Esperando você, Bom dia em voz, Modo foco, Só leitura e Celular" loading="lazy" style="width:100%;display:block"></figure>
 
-  <p class="sub" style="margin-bottom:12px">Lido de verdade numa máquina do INEMA em 08/11/2026, às 08:18 (na sua máquina os números serêo outros, e mudam a cada hora):</p>
+  <p class="sub" style="margin-bottom:12px">Lido de verdade numa máquina do ARCKHÉ em 08/11/2026, às 08:18 (na sua máquina os números serêo outros, e mudam a cada hora):</p>
   <div class="nums">
     <div><b>62</b><span>sistemas lidos (53 timers, 6 serviços sem timer, 3 filas e logs)</span></div>
     <div><b>40</b><span>terminaram bem</span></div>
@@ -230,13 +230,13 @@ git --version</pre></div>
   <div class="step"><div class="b">1</div><div>
     <h3>Baixe o kit</h3>
     <p>Cria a pasta <code>jarvis-painel</code> com os scripts, a página, os prompts e os testes.</p>
-<pre>git clone https://github.com/inematds/jarvis-painel.git
+<pre>git clone https://github.com/linnoff88-dev/jarvis-painel.git
 cd jarvis-painel</pre>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
     <h3>Diga quem é você e onde estêo as suas pendências</h3>
-    <p>O <code>config.json</code> vem configurado para o INEMA. Abra no editor do terminal (salve com Ctrl+O, Enter, e saia com Ctrl+X):</p>
+    <p>O <code>config.json</code> vem configurado para o ARCKHÉ. Abra no editor do terminal (salve com Ctrl+O, Enter, e saia com Ctrl+X):</p>
 <pre>nano config.json</pre>
     <p>O mais simples é apagar tudo e colar este, trocando o nome e o caminho do seu arquivo de pendências (se nêo tiver, deixe como está: o painel mostra um "exemplo" no lugar):</p>
 <pre>{
@@ -245,7 +245,7 @@ cd jarvis-painel</pre>
   "fontes_extras": [],
   "ignorar": ["snap.*", "run-u*", "*.scope"]
 }</pre>
-    <p>A versêo do INEMA, que vem no kit, também lê duas filas e um log:</p>
+    <p>A versêo do ARCKHÉ, que vem no kit, também lê duas filas e um log:</p>
 <pre>{
   "nome": "Nei",
   "pendencias": { "arquivo": "~/projetos/wifi/pendencias.md", "parar_em": "Resolvidas" },
@@ -263,7 +263,7 @@ cd jarvis-painel</pre>
     <h3>Leia a máquina</h3>
     <p>Só leitura: timers, último resultado de cada serviço, falhas, pendências e filas. A linha final resume o que achou.</p>
 <pre>python3 coletar.py</pre>
-    <p>Na máquina do INEMA, o terminal mostrou (o script escreve em português):</p>
+    <p>Na máquina do ARCKHÉ, o terminal mostrou (o script escreve em português):</p>
 <pre>estado.json: 62 sistemas (53 timers) · 40 ok · 11 falharam · 42 esperando você · 0 exemplos</pre>
     <p>Se o <code>config.json</code> tiver um erro de digitaçêo, o script diz a linha e a coluna do erro.</p>
   </div></div>
@@ -272,7 +272,7 @@ cd jarvis-painel</pre>
     <h3>Escreva o resumo da manhê</h3>
     <p>Por regra fixa, sem IA: o que os robôs fizeram desde ontem, o que espera você e a primeira coisa a fazer. Grava em <code>bom_dia.txt</code>.</p>
 <pre>python3 bom_dia.py</pre>
-    <p>Com Ollama rodando, o modelo local deixa o texto mais natural sem mudar os números (o modelo fica no <code>config.json</code>; se o Ollama nêo responder, fica o texto da regra). Na máquina do INEMA levou 17,5 segundos com o qwen3.8:27b.</p>
+    <p>Com Ollama rodando, o modelo local deixa o texto mais natural sem mudar os números (o modelo fica no <code>config.json</code>; se o Ollama nêo responder, fica o texto da regra). Na máquina do ARCKHÉ levou 17,5 segundos com o qwen3.8:27b.</p>
 <pre>python3 bom_dia.py --ollama</pre>
   </div></div>
 
@@ -332,7 +332,7 @@ Monte uma tabela com: nome, site, telefone e uma coisa que o site faz mal.
 Regras: só leia. Nêo contate ninguém, nêo preencha formulário.</pre></div>
     <div class="card"><h3>Conserta a tela</h3><p>Se o painel abrir em branco ou com erro, abra o Claude Code ou o Codex na pasta, cole o pedido e o erro do console (tecla F12). Arquivo <code>prompts/conserta-tela.md</code>.</p></div>
   </div>
-  <div class="aviso" style="margin-top:26px">Quer conversar por voz com um modelo que roda na sua GPU? O painel funciona sozinho, e o kit irmêo <a href="https://inematds.github.io/jarvis-local/guia/" target="_blank" rel="noopener"><strong>jarvis-local</strong></a> adiciona o ouvido e a voz. Use o <code>prompts/jarvis-personalidade.md</code> como instruçêo dele.</div>
+  <div class="aviso" style="margin-top:26px">Quer conversar por voz com um modelo que roda na sua GPU? O painel funciona sozinho, e o kit irmêo <a href="https://linnoff88-dev.github.io/arckhe-/guia/" target="_blank" rel="noopener"><strong>jarvis-local</strong></a> adiciona o ouvido e a voz. Use o <code>prompts/jarvis-personalidade.md</code> como instruçêo dele.</div>
 </div></section>
 
 <section id="roadmap"><div class="wrap">
@@ -349,8 +349,8 @@ Regras: só leia. Nêo contate ninguém, nêo preencha formulário.</pre></div>
   <div class="wrap">
     <div class="pill">Python 3 (só biblioteca padrêo)</div><div class="pill">HTML + canvas</div><div class="pill">speechSynthesis pt-BR</div><div class="pill">Ollama (opcional)</div>
     <p style="margin-top:18px">jarvis-painel · licença MIT · conteúdo aberto e gratuito ·
-      <a href="https://github.com/inematds/jarvis-painel">github.com/inematds/jarvis-painel</a> ·
-      <a href="https://inema.club">INEMA.CLUB</a></p>
+      <a href="https://github.com/linnoff88-dev/jarvis-painel">github.com/linnoff88-dev/jarvis-painel</a> ·
+      <a href="https://ARCKHÉ AI">ARCKHÉ AI</a></p>
   </div>
 </footer>
 

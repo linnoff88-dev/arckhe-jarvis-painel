@@ -1,6 +1,6 @@
 # jarvis-painel — el panel de tu Jarvis
 
-[![jarvis-painel](guia/assets/banner-es.jpg)](https://inematds.github.io/jarvis-painel/guia/es/)
+[![jarvis-painel](guia/assets/banner-es.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/es/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -16,8 +16,8 @@ en tu máquina, sin clave ni servicio pago, y solo lee: los botones no ejecutan 
 
 ## 📖 Guía de uso
 
-Guía completa (landing + paso a paso): **https://inematds.github.io/jarvis-painel/guia/es/**
-Demostración en línea (modo ejemplo, sin tus datos): **https://inematds.github.io/jarvis-painel/**
+Guía completa (landing + paso a paso): **https://linnoff88-dev.github.io/arckhe-/guia/es/**
+Demostración en línea (modo ejemplo, sin tus datos): **https://linnoff88-dev.github.io/arckhe-/**
 
 ## Lo que aparece en la pantalla
 
@@ -40,7 +40,7 @@ Quién lo hace: 🧠 tú · ⚙️ script · 🤖 modelo de IA (opcional)
 
 | # | Paso | Comando | Quién |
 |---|---|---|---|
-| 1 | Descargar el kit | `git clone https://github.com/inematds/jarvis-painel.git && cd jarvis-painel` | 🧠 |
+| 1 | Descargar el kit | `git clone https://github.com/linnoff88-dev/jarvis-painel.git && cd jarvis-painel` | 🧠 |
 | 2 | Indicar tu nombre, el archivo de pendientes y las colas | editar `config.json` | 🧠 |
 | 3 | Leer la máquina (timers, fallas, pendientes, colas) | `python3 coletar.py` → `estado.json` | ⚙️ |
 | 4 | Escribir el resumen de la mañana con reglas fijas | `python3 bom_dia.py` → `bom_dia.txt` | ⚙️ |
@@ -53,7 +53,7 @@ Quién lo hace: 🧠 tú · ⚙️ script · 🤖 modelo de IA (opcional)
 Necesitas Python 3.9+ y git (en Ubuntu: `sudo apt install git`).
 
 ```bash
-git clone https://github.com/inematds/jarvis-painel.git
+git clone https://github.com/linnoff88-dev/jarvis-painel.git
 cd jarvis-painel
 python3 coletar.py
 python3 bom_dia.py
@@ -72,7 +72,7 @@ La página vuelve a leer `estado.json` cada 60 segundos.
 
 ## Configurar (`config.json`)
 
-Viene configurado para INEMA: pendientes en `~/projetos/wifi/pendencias.md` y dos colas JSON del proyecto wifi.
+Viene configurado para ARCKHÉ: pendientes en `~/projetos/wifi/pendencias.md` y dos colas JSON del proyecto wifi.
 Cámbialo por el tuyo (`nano config.json`; si te equivocas en una coma, `coletar.py` indica la línea del error):
 
 | Campo | Qué es |
@@ -105,7 +105,7 @@ Versiones en inglés y español en `prompts/en/` y `prompts/es/`.
 ## Conversar por voz con un modelo local
 
 El panel funciona por sí solo. Para conversar por voz con un modelo que funciona en tu GPU, usa el kit hermano
-**[jarvis-local](https://inematds.github.io/jarvis-local/guia/)** y pega `prompts/jarvis-personalidade.md` como instrucción.
+**[jarvis-local](https://linnoff88-dev.github.io/arckhe-/guia/)** y pega `prompts/jarvis-personalidade.md` como instrucción.
 
 ## Pruebas
 
@@ -120,4 +120,4 @@ colas, modo anónimo y `bom_dia.py` sin Ollama.
 
 ## Licencia
 
-MIT. Contenido abierto de [INEMA.CLUB](https://inema.club).
+MIT. Contenido abierto de [ARCKHÉ AI](https://ARCKHÉ AI).

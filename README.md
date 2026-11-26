@@ -6,7 +6,7 @@
 </div>
 
 
-[![jarvis-painel](guia/assets/banner.jpg)](https://inematds.github.io/jarvis-painel/guia/)
+[![jarvis-painel](guia/assets/banner.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/)
 
 **ê°Å¸â¡Â§ê°Å¸â¡Â· [PortuguêÂªs](README.md) êÂ· ê°Å¸â¡Âºê°Å¸â¡Â¸ [English](README.en.md) êÂ· ê°Å¸â¡Âªê°Å¸â¡Â¸ [EspaêÂ±ol](README.es.md)**
 
@@ -22,8 +22,8 @@ na sua mêÂ¡quina, sem chave e sem serviêÂ§o pago, e ele sêÂ³ lê�
 
 ## ê°Å¸ââ Guia de uso
 
-Guia completo (landing + passo a passo): **https://inematds.github.io/jarvis-painel/guia/**
-DemonstraêÂ§êÂ£o no ar (modo exemplo, sem os seus dados): **https://inematds.github.io/jarvis-painel/**
+Guia completo (landing + passo a passo): **https://linnoff88-dev.github.io/arckhe-/guia/**
+DemonstraêÂ§êÂ£o no ar (modo exemplo, sem os seus dados): **https://linnoff88-dev.github.io/arckhe-/**
 
 ## O que aparece na tela
 
@@ -46,7 +46,7 @@ Quem faz: ê°Å¸Â§Â  vocêÂª êÂ· ê¢Å¡â¢ê¯Â¸Â scrip
 
 | # | Passo | Comando | Quem |
 |---|---|---|---|
-| 1 | Baixar o kit | `git clone https://github.com/inematds/jarvis-painel.git && cd jarvis-painel` | ê°Å¸Â§Â  |
+| 1 | Baixar o kit | `git clone https://github.com/linnoff88-dev/jarvis-painel.git && cd jarvis-painel` | ê°Å¸Â§Â  |
 | 2 | Dizer o seu nome, o arquivo de pendêÂªncias e as filas | editar `config.json` | ê°Å¸Â§Â  |
 | 3 | Ler a mêÂ¡quina (timers, falhas, pendêÂªncias, filas) | `python3 coletar.py` ê¢â â `estado.json` | ê¢Å¡â¢ê¯Â¸Â |
 | 4 | Escrever o resumo da manhêÂ£ por regra fixa | `python3 bom_dia.py` ê¢â â `bom_dia.txt` | ê¢Å¡â¢ê¯Â¸Â |
@@ -59,7 +59,7 @@ Quem faz: ê°Å¸Â§Â  vocêÂª êÂ· ê¢Å¡â¢ê¯Â¸Â scrip
 Precisa de Python 3.9+ e do git (no Ubuntu: `sudo apt install git`).
 
 ```bash
-git clone https://github.com/inematds/jarvis-painel.git
+git clone https://github.com/linnoff88-dev/jarvis-painel.git
 cd jarvis-painel
 python3 coletar.py
 python3 bom_dia.py
@@ -78,7 +78,7 @@ A pêÂ¡gina relêÂª o `estado.json` a cada 60 segundos.
 
 ## Configurar (`config.json`)
 
-Vem configurado para o INEMA: pendêÂªncias em `~/projetos/wifi/pendencias.md` e duas filas JSON do projeto wifi.
+Vem configurado para o ARCKHÉ: pendêÂªncias em `~/projetos/wifi/pendencias.md` e duas filas JSON do projeto wifi.
 Troque pelo seu (`nano config.json`; se errar uma vêÂ­rgula, o `coletar.py` diz a linha do erro):
 
 | Campo | O que êÂ© |
@@ -111,7 +111,7 @@ VersêÂµes em inglêÂªs e espanhol em `prompts/en/` e `prompts/es/`.
 ## Conversar por voz com um modelo local
 
 O painel funciona sozinho. Para conversar por voz com um modelo que roda na sua GPU, use o kit irmêÂ£o
-**[jarvis-local](https://inematds.github.io/jarvis-local/guia/)** e cole o `prompts/jarvis-personalidade.md` como instruêÂ§êÂ£o.
+**[jarvis-local](https://linnoff88-dev.github.io/arckhe-/guia/)** e cole o `prompts/jarvis-personalidade.md` como instruêÂ§êÂ£o.
 
 ## Testes
 
@@ -126,7 +126,7 @@ filas, modo anêÂ´nimo e o `bom_dia.py` sem Ollama.
 
 ## LicenêÂ§a
 
-MIT. ConteêÂºdo aberto do [INEMA.CLUB](https://inema.club).
+MIT. ConteêÂºdo aberto do [ARCKHÉ AI](https://ARCKHÉ AI).
 
 ---
 

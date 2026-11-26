@@ -10,7 +10,7 @@ Painel HUD (index.html) que mostra timers, serviços, filas e pendências da má
 - `estado.json` e `bom_dia.txt` têm dados reais da máquina: ficam no `.gitignore`. Print público = `coletar.py --anonimo`.
 - Testes sem rede: `python3 -m pytest -q`. Mudou o fluxo → atualizar "O processo, do início ao fim" no README (PT/EN/ES).
 - Guia em `guia/` (PT) + `guia/en/` + `guia/es/`; comandos dentro de `<pre>` iguais byte a byte nos três idiomas.
-- Commits: autor `inematds <inematds@gmail.com>`.
+- Commits: autor `linnoff88-dev <linnoff88-dev@gmail.com>`.
 
 ## Self-learning
 

@@ -1,6 +1,6 @@
 # jarvis-painel — your Jarvis dashboard
 
-[![jarvis-painel](guia/assets/banner-en.jpg)](https://inematds.github.io/jarvis-painel/guia/en/)
+[![jarvis-painel](guia/assets/banner-en.jpg)](https://linnoff88-dev.github.io/arckhe-/guia/en/)
 
 **🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
 
@@ -12,8 +12,8 @@ jarvis-painel is a science fiction style dashboard that brings together everythi
 
 ## 📖 User guide
 
-Complete guide (landing page + step by step): **https://inematds.github.io/jarvis-painel/guia/en/**
-Live demo (example mode, without your data): **https://inematds.github.io/jarvis-painel/**
+Complete guide (landing page + step by step): **https://linnoff88-dev.github.io/arckhe-/guia/en/**
+Live demo (example mode, without your data): **https://linnoff88-dev.github.io/arckhe-/**
 
 ## What appears on screen
 
@@ -35,7 +35,7 @@ Who does what: 🧠 you · ⚙️ script · 🤖 AI model (optional)
 
 | # | Step | Command | Who |
 |---|---|---|---|
-| 1 | Download the kit | `git clone https://github.com/inematds/jarvis-painel.git && cd jarvis-painel` | 🧠 |
+| 1 | Download the kit | `git clone https://github.com/linnoff88-dev/jarvis-painel.git && cd jarvis-painel` | 🧠 |
 | 2 | Enter your name, to do list file, and queues | edit `config.json` | 🧠 |
 | 3 | Read the machine (timers, failures, to do list, queues) | `python3 coletar.py` → `estado.json` | ⚙️ |
 | 4 | Write the morning summary using fixed rules | `python3 bom_dia.py` → `bom_dia.txt` | ⚙️ |
@@ -48,7 +48,7 @@ Who does what: 🧠 you · ⚙️ script · 🤖 AI model (optional)
 You need Python 3.9+ and git (on Ubuntu: `sudo apt install git`).
 
 ```bash
-git clone https://github.com/inematds/jarvis-painel.git
+git clone https://github.com/linnoff88-dev/jarvis-painel.git
 cd jarvis-painel
 python3 coletar.py
 python3 bom_dia.py
@@ -67,7 +67,7 @@ The page reloads `estado.json` every 60 seconds.
 
 ## Configure (`config.json`)
 
-It comes set up for INEMA: to do list at `~/projetos/wifi/pendencias.md` and two JSON queues from the wifi project.
+It comes set up for ARCKHÉ: to do list at `~/projetos/wifi/pendencias.md` and two JSON queues from the wifi project.
 Replace them with your own (`nano config.json`; if you miss a comma, `coletar.py` tells you the line with the error):
 
 | Field | What it is |
@@ -99,7 +99,7 @@ English and Spanish versions are in `prompts/en/` and `prompts/es/`.
 ## Talk by voice with a local model
 
 The dashboard works on its own. To talk by voice with a model running on your GPU, use the sibling kit
-**[jarvis-local](https://inematds.github.io/jarvis-local/guia/)** and paste `prompts/jarvis-personalidade.md` as the instructions.
+**[jarvis-local](https://linnoff88-dev.github.io/arckhe-/guia/)** and paste `prompts/jarvis-personalidade.md` as the instructions.
 
 ## Tests
 
@@ -114,4 +114,4 @@ queues, anonymous mode, and `bom_dia.py` without Ollama.
 
 ## License
 
-MIT. Open content from [INEMA.CLUB](https://inema.club).
+MIT. Open content from [ARCKHÉ AI](https://ARCKHÉ AI).
